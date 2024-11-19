@@ -1,5 +1,29 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  color: #e6e6e6;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.App::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(126, 231, 135, 0.05) 0%,
+    rgba(126, 231, 135, 0) 50%
+  );
+  opacity: 0.7;
+  animation: pulse 15s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .App-logo {
@@ -14,14 +38,53 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 4rem 2.5rem;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 17, 23, 0.95) 0%,
+    rgba(13, 17, 23, 0) 100%
+  );
+  backdrop-filter: blur(10px);
+}
+
+.App-header h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+  background: linear-gradient(
+    45deg,
+    #ffffff 0%,
+    #7ee787 50%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 8s linear infinite;
+  position: relative;
+  display: inline-block;
+}
+
+.App-header h1::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(126, 231, 135, 0) 0%,
+    rgba(126, 231, 135, 0.5) 50%,
+    rgba(126, 231, 135, 0) 100%
+  );
 }
 
 .App-link {
@@ -34,5 +97,59 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(-25%, -25%) scale(1.5);
+    opacity: 0.5;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
   }
 }

@@ -1,0 +1,14 @@
+{
+  "sentences": [
+    {
+      "text": "Když pomyješ a uklidíš, uvařím něco dobrého.",
+      "mainClause": "uvařím něco dobrého",
+      "dependentClause": "Když pomyješ a uklidíš",
+      "explanation": "Hlavní věta je 'uvařím něco dobrého', protože může stát samostatně. Vedlejší věta je podmínková a odpovídá na otázku 'Za jaké podmínky?'",
+      "order": {
+        "mainClausePosition": 1,
+        "dependentClausePosition": 0
+      }
+    }
+  ]
+} 
