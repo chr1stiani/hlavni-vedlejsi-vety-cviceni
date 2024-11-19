@@ -1,39 +1,63 @@
 .exercise-selection {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-.exercises-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.exercises-container {
+  display: flex;
+  flex-direction: row;
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
+  justify-content: center;
 }
 
 .exercise-card {
   background: rgba(13, 17, 23, 0.85);
   border-radius: 20px;
-  padding: 2rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 200px;
+  width: 100%;
+  max-width: 500px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .exercise-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
 .exercise-card a {
   text-decoration: none;
   color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.card-content {
+  flex: 1;
+  padding: 2.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .exercise-card h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
+  color: #7ee787;
+  transition: all 0.3s ease;
+}
+
+.exercise-card:hover h2 {
   background: linear-gradient(45deg, #ffffff 0%, #7ee787 50%, #ffffff 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -44,4 +68,95 @@
 .exercise-card p {
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
+  font-size: 1.2rem;
+}
+
+.start-button {
+  padding: 1.5rem;
+  background: rgba(13, 17, 23, 0.95);
+  color: #7ee787;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-top: 1px solid rgba(126, 231, 135, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.exercise-card:hover .start-button {
+  background: rgba(13, 17, 23, 0.98);
+  color: #ffffff;
+}
+
+.start-button .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(126, 231, 135, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.exercise-card:hover .start-button .icon {
+  transform: translateX(4px);
+  background: rgba(126, 231, 135, 0.2);
+}
+
+@media (max-width: 1024px) {
+  .exercises-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .exercise-card {
+    max-width: 100%;
+  }
+}
+
+.exercise-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: #7ee787;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.exercise-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(90deg, #7ee787, #ffffff, #7ee787);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.exercise-card:hover::after {
+  opacity: 1;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
 }
