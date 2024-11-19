@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -44,3 +45,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+=======
+# hlavni-vedlejsi-vety-cviceni
+React based aplikace, díky které si můžeme procvičovat češtinu - hlavní a vedlejší věty.
+>>>>>>> c546c34bfd2b63234d107eaa3e136d8c9a16a5cf
