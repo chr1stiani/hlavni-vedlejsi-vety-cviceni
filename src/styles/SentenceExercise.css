@@ -235,4 +235,34 @@ body {
 body:has(.blob.selected) {
   cursor: pointer;
 }
+
+.question-prompt {
+  background: rgba(22, 27, 34, 0.8);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.question-prompt h3 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.blob {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.9rem;
+}
+
+.blob.selected {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
   

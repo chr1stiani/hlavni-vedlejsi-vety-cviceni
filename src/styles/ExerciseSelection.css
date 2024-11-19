@@ -1,0 +1,47 @@
+.exercise-selection {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.exercises-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.exercise-card {
+  background: rgba(13, 17, 23, 0.85);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.exercise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.exercise-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.exercise-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #ffffff 0%, #7ee787 50%, #ffffff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.exercise-card p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}

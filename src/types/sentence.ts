@@ -24,3 +24,16 @@ export interface DragBlob {
   type: 'main' | 'dependent';
   color: string;
 }
+
+export interface VedlejsiVetaSentence {
+  text: string;
+  type: string;
+  question: string;
+  explanation: string;
+  typeExplanation: string;
+}
+
+export interface VedlejsiVetaType {
+  type: string;
+  color: string;
+}

@@ -1,0 +1,18 @@
+{
+  "sentences": [
+    {
+      "text": "Kdo se bojí, nesmí do lesa.",
+      "type": "podmětná",
+      "question": "Kdo nesmí do lesa?",
+      "explanation": "Vedlejší věta odpovídá na otázku 'kdo?'",
+      "typeExplanation": "Vedlejší věta podmětná zastupuje podmět hlavní věty a odpovídá na otázku 'Kdo? Co?'"
+    },
+    {
+      "text": "Řekni mi, kdy přijdeš domů.",
+      "type": "předmětná",
+      "question": "Co mi řekni?",
+      "explanation": "Vedlejší věta rozvíjí sloveso 'řekni' a odpovídá na otázku 'co?'",
+      "typeExplanation": "Vedlejší věta předmětná rozvíjí předmět hlavní věty a odpovídá na otázky 'Koho? Co? Komu? Čemu?'"
+    }
+  ]
+}
