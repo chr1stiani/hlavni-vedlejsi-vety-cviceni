@@ -9,6 +9,46 @@
         "mainClausePosition": 1,
         "dependentClausePosition": 0
       }
+    },
+    {
+      "text": "Kdo mi neporozuměl, může se na všechno znovu zeptat.",
+      "mainClause": "může se na všechno znovu zeptat",
+      "dependentClause": "Kdo mi neporozuměl",
+      "explanation": "Hlavní věta je 'může se na všechno znovu zeptat', protože může stát samostatně. Vedlejší věta je podmětná a odpovídá na otázku 'Kdo?'",
+      "order": {
+        "mainClausePosition": 1,
+        "dependentClausePosition": 0
+      }
+    },
+    {
+      "text": "Bojím se, že někteří z vás nedostudují.",
+      "mainClause": "Bojím se",
+      "dependentClause": "že někteří z vás nedostudují",
+      "explanation": "Hlavní věta je 'Bojím se', protože může stát samostatně. Vedlejší věta je předmětná a odpovídá na otázku 'Čeho se bojím?'",
+      "order": {
+        "mainClausePosition": 0,
+        "dependentClausePosition": 1
+      }
+    },
+    {
+      "text": "Závodníci, kteří projeli cílovou páskou, byli bouřlivě pozdraveni.",
+      "mainClause": "Závodníci byli bouřlivě pozdraveni",
+      "dependentClause": "kteří projeli cílovou páskou",
+      "explanation": "Hlavní věta je 'Závodníci byli bouřlivě pozdraveni', protože může stát samostatně. Vedlejší věta je přívlastková a rozvíjí podstatné jméno 'závodníci'.",
+      "order": {
+        "mainClausePosition": 0,
+        "dependentClausePosition": 1
+      }
+    },
+    {
+      "text": "Aby mě uslyšel, musel jsem křičet.",
+      "mainClause": "musel jsem křičet",
+      "dependentClause": "Aby mě uslyšel",
+      "explanation": "Hlavní věta je 'musel jsem křičet', protože může stát samostatně. Vedlejší věta je účelová a odpovídá na otázku 'Za jakým účelem?'",
+      "order": {
+        "mainClausePosition": 1,
+        "dependentClausePosition": 0
+      }
     }
   ]
 } 
